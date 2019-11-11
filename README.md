@@ -2,8 +2,7 @@
 
 Holmes is an emulation of an example structure of a real world estate. This project contains the code for the backend of Holmes.
 
-The real world estate in view is that which is made up of various residential houses. In the estate, these houses should be easily accessed via their addresses.  To access a house or its address, one needs to know its street and then the district in 
-which that street is found before it can be located in the estate. Implied is there are various residential houses in a street and various streets in a districts and in a district and various districts in the estate.
+The real world estate in view is that which is made up of various residential houses. In the estate, these houses are easily accessed via their addresses.  To access a house or its address, one needs to know its street and the district in which that street is found. Implied is: there are various residential houses in a street and various streets in a district and various districts in the estate.
 
 **Holmes** emulates the above real world estate example structure with the following notable
 1) To access a house, one needs its address.
