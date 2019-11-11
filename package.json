@@ -1,0 +1,33 @@
+{
+  "name": "holmes-backend",
+  "version": "1.0.0",
+  "description": "Holmes is an emulation of an example structure of a real world estate. This repository contains the code for the backend of Holmes.",
+  "main": "server.js",
+  "scripts": {
+    "pretest": "eslint --fix .",
+    "test": "jasmine",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obumnwabude/holmes-backend.git"
+  },
+  "author": "Obumuneme Nwabude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obumnwabude/holmes-backend/issues"
+  },
+  "homepage": "https://github.com/obumnwabude/holmes-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "pg": "^7.12.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jasmine": "^3.5.0"
+  }
+}

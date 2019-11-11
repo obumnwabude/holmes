@@ -1,0 +1,7 @@
+# gitignore
+
+# dependencies
+/node_modules
+
+# lockfile should be generated on npm install
+package-lock.json
