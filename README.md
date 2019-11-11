@@ -1,4 +1,4 @@
-# holmes-backend
+# holmes-backend [![Build Status](https://travis-ci.com/obumnwabude/holmes-backend.svg?branch=master)](https://travis-ci.com/obumnwabude/holmes-backend)
 
 Holmes is an emulation of an example structure of a real world estate. This project contains the code for the backend of Holmes.
 
