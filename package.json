@@ -4,7 +4,8 @@
   "description": "Holmes is an emulation of an example structure of a real world estate. This repository contains the code for the backend of Holmes.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint --fix .",
+    "pretest": "eslint --fix .",
+    "test": "jasmine",
     "start": "nodemon index"
   },
   "repository": {

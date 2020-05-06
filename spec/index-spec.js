@@ -1,22 +1,22 @@
-/**
- * The following Test was commented out after
- * it had worked well when the server is up and running.
- * But it fails in Travis CI build because Travis
- * starts the test without starting the server.
- */
-/*
 const request = require('request');
+const server = require('../index');
 
-const baseUrl = 'http://localhost:3000/';
+const baseUrl = process.env.HOST || 'http://localhost:3000/';
 
-describe('server', () => {
-  describe('GET /', () => {
-    it('returns status code 200', (done) => {
+describe('Server', () => {
+  afterAll(() => server.close());
+  describe('is working properly', () => {
+    it('should return a status code of 200 on / (home route)', (done) => {
       request.get(baseUrl, (error, response) => {
         expect(response.statusCode).toBe(200);
         done();
       });
     });
+    it('should return OK on / (home route)', (done) => {
+      request.get(baseUrl, (error, response) => {
+        expect(response.body).toBe('OK');
+        done();
+      });
+    });
   });
 });
-*/

@@ -1,13 +1,10 @@
-const http = require('http');
 const express = require('express');
 
 const app = express();
-
-app.set('port', process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.send('OK');
 });
-const server = http.createServer(app);
 
-server.listen(process.env.PORT || 3000);
+module.exports = app.listen(port);
