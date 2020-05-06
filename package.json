@@ -20,14 +20,14 @@
   "homepage": "https://github.com/obumnwabude/holmes-backend#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^1.19.4",
-    "pg": "^7.12.1",
-    "request": "^2.88.0"
+    "nodemon": "^2.0.3",
+    "pg": "^7.12.1"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "jasmine": "^3.5.0"
+    "jasmine": "^3.5.0",
+    "supertest": "^4.0.2"
   }
 }
