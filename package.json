@@ -6,7 +6,10 @@
   "scripts": {
     "pretest": "eslint --fix .",
     "test": "jasmine",
-    "start": "nodemon index"
+    "start": "node index",
+    "watch:lint": "esw --watch --fix .",
+    "watch:start": "nodemon index.js",
+    "dev": "(start npm run watch:lint && start npm run watch:start) || (npm run watch:lint & npm run watch:start)"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-watch": "^6.0.1",
     "jasmine": "^3.5.0",
     "supertest": "^4.0.2"
   }
