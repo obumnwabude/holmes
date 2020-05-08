@@ -1,4 +1,6 @@
-# holmes-backend [![Build Status](https://travis-ci.com/obumnwabude/holmes-backend.svg?branch=master)](https://travis-ci.com/obumnwabude/holmes-backend)
+[![Build Status](https://travis-ci.com/obumnwabude/holmes-backend.svg?branch=master)](https://travis-ci.com/obumnwabude/holmes-backend) [![Maintainability](https://api.codeclimate.com/v1/badges/5de4043dc3503d9ac8f3/maintainability)](https://codeclimate.com/github/obumnwabude/holmes-backend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5de4043dc3503d9ac8f3/test_coverage)](https://codeclimate.com/github/obumnwabude/holmes-backend/test_coverage)
+
+# Backend of Holmes
 
 Holmes is an emulation of an example structure of a real world estate. This project contains the code for the backend of Holmes.
 
