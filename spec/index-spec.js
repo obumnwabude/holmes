@@ -14,4 +14,17 @@ describe('Server', () => {
         });
     });
   });
+  describe('can get all districts', () => {
+    it('should return districts as JSON', (done) => {
+      request(app)
+        .get('/districts')
+        .set('Accept', 'application/json')
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end((err) => {
+          if (err) done.fail(err);
+          else done();
+        });
+    });
+  });
 });
