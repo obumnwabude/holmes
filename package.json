@@ -8,7 +8,7 @@
     "test": "jasmine",
     "start": "node index",
     "watch:lint": "esw --watch --fix .",
-    "watch:start": "nodemon index.js",
+    "watch:start": "nodemon -r dotenv/config index.js",
     "dev": "(start npm run watch:lint && start npm run watch:start) || (npm run watch:lint & npm run watch:start)"
   },
   "repository": {
@@ -23,10 +23,11 @@
   "homepage": "https://github.com/obumnwabude/holmes-backend#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.3",
     "pg": "^7.12.1"
   },
   "devDependencies": {
+    "nodemon": "^2.0.3",
+    "dotenv": "^8.2.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
