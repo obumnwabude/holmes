@@ -15,7 +15,7 @@ describe('Server', () => {
     });
   });
   describe('can get all districts', () => {
-    it('should return districts as JSON', (done) => {
+    it('should return districts', (done) => {
       request(app)
         .get('/districts')
         .set('Accept', 'application/json')
