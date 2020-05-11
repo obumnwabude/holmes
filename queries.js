@@ -12,6 +12,9 @@ const getAllDistricts = (req, res) => {
     .catch((error) => res.status(500).json(error));
 };
 
+/**
+ * Queries the database and returns a particular district with id found in the URL
+ */
 const getDistrict = (req, res) => {
   const { id } = req.params;
   if (isNaN(id)) {
@@ -22,7 +25,17 @@ const getDistrict = (req, res) => {
     .catch((error) => res.status(500).json(error));
 };
 
+/**
+ * Queries the database and returns all streets
+ */
+const getAllStreets = (req, res) => {
+  client.query('SELECT * FROM streets;')
+    .then((streets) => res.status(200).json({ streets: streets.rows }))
+    .catch((error) => res.status(500).json(error));
+};
+
 module.exports = {
   getAllDistricts,
   getDistrict,
+  getAllStreets,
 };
