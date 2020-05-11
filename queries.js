@@ -34,8 +34,23 @@ const getAllStreets = (req, res) => {
     .catch((error) => res.status(500).json(error));
 };
 
+
+/**
+ * Queries the database and returns a particular street with id found in the URL
+ */
+const getStreet = (req, res) => {
+  const { id } = req.params;
+  if (isNaN(id)) {
+    return res.status(400).json({ message: `Street with ID: ${id} not found.` });
+  }
+  client.query(`SELECT * FROM streets WHERE id = ${id};`)
+    .then((street) => res.status(200).json({ street: street.rows[0] }))
+    .catch((error) => res.status(500).json(error));
+};
+
 module.exports = {
   getAllDistricts,
   getDistrict,
   getAllStreets,
+  getStreet,
 };

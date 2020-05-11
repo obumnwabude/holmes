@@ -84,4 +84,50 @@ describe('Database', () => {
         else done();
       });
   });
+  it('should return a valid street with houses on #getStreet when given a valid id', (done) => {
+    app.get('/street/:id', queries.getStreet);
+    request(app)
+      .get('/street/1')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.street).toBeDefined();
+        expect(response.body.street.houses).toBeInstanceOf(Number);
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
+  it('should return no street on #getStreet when given a non-existent id', (done) => {
+    app.get('/street/:id', queries.getStreet);
+    request(app)
+      .get('/street/50000') // Holmes does not have up to 50000 streets.
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.street).toBeUndefined();
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
+  it('should return no street on #getStreet when given invalid or non-numeric id', (done) => {
+    app.get('/street/:id', queries.getStreet);
+    request(app)
+      .get('/street/i-am-invalid')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(400);
+        expect(response.body.street).toBeUndefined();
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
 });
