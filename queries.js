@@ -48,9 +48,23 @@ const getStreet = (req, res) => {
     .catch((error) => res.status(500).json(error));
 };
 
+/**
+ * Queries the database and returns the sum of all houses in Holmes
+ */
+const getHouses = (req, res) => {
+  client.query('SELECT houses FROM streets;')
+    .then((houses) => res.status(200).json({
+      houses: (houses.rows.reduce((house1, house2) => ({
+        houses: house1.houses + house2.houses,
+      }))).houses,
+    }))
+    .catch((error) => res.status(500).json(error));
+};
+
 module.exports = {
   getAllDistricts,
   getDistrict,
   getAllStreets,
   getStreet,
+  getHouses,
 };
