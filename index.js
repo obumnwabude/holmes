@@ -8,5 +8,6 @@ app.get('/api/v1/districts', queries.getAllDistricts);
 app.get('/api/v1/district/:id', queries.getDistrict);
 app.get('/api/v1/streets', queries.getAllStreets);
 app.get('/api/v1/street/:id', queries.getStreet);
+app.get('/api/v1/houses', queries.getHouses);
 
 module.exports = app.listen(port);
