@@ -30,4 +30,18 @@ describe('Server', () => {
         else done();
       });
   });
+  it('can get all streets', (done) => {
+    request(app)
+      .get('/api/v1/streets')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.streets).toBeInstanceOf(Array);
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
 });
