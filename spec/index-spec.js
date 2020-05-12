@@ -2,29 +2,74 @@ const request = require('supertest');
 const app = require('../index');
 
 describe('Server', () => {
-  afterAll(() => app.close());
-  describe('is working properly', () => {
-    it('should return a status code of 200 on / (home route)', (done) => {
-      request(app)
-        .get('/')
-        .expect(200)
-        .end((err) => {
-          if (err) done.fail(err);
-          else done();
-        });
-    });
+  it('can get all districts', (done) => {
+    request(app)
+      .get('/api/v1/districts')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.districts).toBeInstanceOf(Array);
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
   });
-  describe('can get all districts', () => {
-    it('should return districts', (done) => {
-      request(app)
-        .get('/districts')
-        .set('Accept', 'application/json')
-        .expect('Content-Type', /json/)
-        .expect(200)
-        .end((err) => {
-          if (err) done.fail(err);
-          else done();
-        });
-    });
+  it('can a district given a district id', (done) => {
+    request(app)
+      .get('/api/v1/district/1')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.district).toBeDefined();
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
+  it('can get all streets', (done) => {
+    request(app)
+      .get('/api/v1/streets')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.streets).toBeInstanceOf(Array);
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
+  it('can return a street given a street id', (done) => {
+    request(app)
+      .get('/api/v1/street/1')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.street).toBeDefined();
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
+  it('can get all houses', (done) => {
+    request(app)
+      .get('/api/v1/houses')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.houses).toBeInstanceOf(Number);
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
   });
 });
