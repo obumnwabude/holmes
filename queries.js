@@ -17,10 +17,10 @@ const getAllDistricts = (req, res) => {
  */
 const getDistrict = (req, res) => {
   const { id } = req.params;
-  if (isNaN(id)) {
+  if (Number.isNaN(Number(id))) {
     return res.status(400).json({ message: `District with ID: ${id} not found.` });
   }
-  client.query(`SELECT * FROM districts WHERE id = ${id};`)
+  return client.query(`SELECT * FROM districts WHERE id = ${id};`)
     .then((district) => res.status(200).json({ district: district.rows[0] }))
     .catch((error) => res.status(500).json(error));
 };
@@ -40,10 +40,10 @@ const getAllStreets = (req, res) => {
  */
 const getStreet = (req, res) => {
   const { id } = req.params;
-  if (isNaN(id)) {
+  if (Number.isNaN(Number(id))) {
     return res.status(400).json({ message: `Street with ID: ${id} not found.` });
   }
-  client.query(`SELECT * FROM streets WHERE id = ${id};`)
+  return client.query(`SELECT * FROM streets WHERE id = ${id};`)
     .then((street) => res.status(200).json({ street: street.rows[0] }))
     .catch((error) => res.status(500).json(error));
 };
