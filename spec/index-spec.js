@@ -16,7 +16,7 @@ describe('Server', () => {
         else done();
       });
   });
-  it('can return a given particular district given an id', (done) => {
+  it('can a district given a district id', (done) => {
     request(app)
       .get('/api/v1/district/1')
       .set('Accept', 'application/json')
@@ -38,6 +38,20 @@ describe('Server', () => {
       .expect((response) => {
         expect(response.status).toBe(200);
         expect(response.body.streets).toBeInstanceOf(Array);
+      })
+      .end((err) => {
+        if (err) done.fail(err);
+        else done();
+      });
+  });
+  it('can return a street given a street id', (done) => {
+    request(app)
+      .get('/api/v1/street/1')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect((response) => {
+        expect(response.status).toBe(200);
+        expect(response.body.street).toBeDefined();
       })
       .end((err) => {
         if (err) done.fail(err);
