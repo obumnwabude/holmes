@@ -4,8 +4,6 @@
 
 Holmes is an emulation of an example structure of a real world estate. This project contains the code for the backend of Holmes.
 
-The Backend of Holmes is live and it is hosted on [Heroku](https://heroku.com) at https://blooming-everglades-50937.herokuapp.com
-
 The real world estate in view is that which is made up of various residential houses. In the estate, these houses are streets and streets are found in districts. Implied is: there are various residential houses in a street and various streets in a district and various districts in the estate.
 
 **Holmes** emulates the above real world estate example structure with the following notable
