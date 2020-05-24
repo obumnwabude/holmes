@@ -1,38 +1,27 @@
 {
-  "name": "holmes-backend",
+  "name": "holmes",
   "version": "1.0.0",
-  "description": "Holmes is an emulation of an example structure of a real world estate. This repository contains the code for the backend of Holmes.",
-  "main": "index.js",
+  "description": "Holmes is an emulation of an example structure of a real world estate.",
   "scripts": {
-    "pretest": "eslint --fix .",
     "test": "jasmine",
-    "start": "node index",
-    "local:lint": "esw --watch --fix .",
-    "local:start": "nodemon -r dotenv/config index.js",
-    "local:test": "node -r dotenv/config node_modules/jasmine/bin/jasmine",
-    "dev": "(start npm run local:lint && start npm run local:start) || (npm run local:lint & npm run local:start)"
+    "local:test": "node -r dotenv/config node_modules/jasmine/bin/jasmine"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/obumnwabude/holmes-backend.git"
+    "url": "git+https://github.com/obumnwabude/holmes.git"
   },
   "author": "Obumuneme Nwabude",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/obumnwabude/holmes-backend/issues"
+    "url": "https://github.com/obumnwabude/holmes/issues"
   },
-  "homepage": "https://github.com/obumnwabude/holmes-backend#readme",
+  "homepage": "https://github.com/obumnwabude/holmes#readme",
   "dependencies": {
-    "express": "^4.17.1",
     "pg": "^7.12.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3",
     "dotenv": "^8.2.0",
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-watch": "^6.0.1",
+    "express": "^4.17.1",
     "jasmine": "^3.5.0",
     "supertest": "^4.0.2"
   }
