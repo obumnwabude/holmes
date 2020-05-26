@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "env": {
+    "PG_URI": "@holmes_pg_uri"
+  }
+}

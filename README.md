@@ -1,10 +1,8 @@
-[![Build Status](https://travis-ci.com/obumnwabude/holmes-backend.svg?branch=master)](https://travis-ci.com/obumnwabude/holmes-backend) [![Maintainability](https://api.codeclimate.com/v1/badges/5de4043dc3503d9ac8f3/maintainability)](https://codeclimate.com/github/obumnwabude/holmes-backend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5de4043dc3503d9ac8f3/test_coverage)](https://codeclimate.com/github/obumnwabude/holmes-backend/test_coverage)
+[![Build Status](https://travis-ci.com/obumnwabude/holmes.svg?branch=master)](https://travis-ci.com/obumnwabude/holmes) [![Maintainability](https://api.codeclimate.com/v1/badges/5de4043dc3503d9ac8f3/maintainability)](https://codeclimate.com/github/obumnwabude/holmes-backend/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5de4043dc3503d9ac8f3/test_coverage)](https://codeclimate.com/github/obumnwabude/holmes-backend/test_coverage)
 
-# Backend of Holmes
+# Holmes
 
 Holmes is an emulation of an example structure of a real world estate. This project contains the code for the backend of Holmes.
-
-The Backend of Holmes is live and it is hosted on [Heroku](https://heroku.com) at https://blooming-everglades-50937.herokuapp.com
 
 The real world estate in view is that which is made up of various residential houses. In the estate, these houses are streets and streets are found in districts. Implied is: there are various residential houses in a street and various streets in a district and various districts in the estate.
 
@@ -16,10 +14,8 @@ The real world estate in view is that which is made up of various residential ho
 
 This project provides the necessary APIs for accessing houses in a street, streets in a district and the districts in **Holmes**.
 
+This project is hosted with [Vercel](https://vercel.com) at https://holmes.now.sh
+
 Relevant to this project:
-* The backend service used was [NodeJS](https://nodejs.org/)/[Express](https://expressjs.com/)
-* The database used was [PostgreSQL](https://www.postgresql.org/)
-* The linting tool used was [ESlint](https://eslint.org/)
-* The style guide used in linting was [airbnb](https://github.com/airbnb/javascript)
-* The testing framework used was [Jasmine](https://jasmine.github.io/)
-* The Git workflow design used was [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+* The backend service used was [NodeJS](https://nodejs.org/)
+
