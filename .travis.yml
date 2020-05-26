@@ -9,6 +9,7 @@ cache:
 dist: trusty
 addons:
   chrome: stable
+
 before_script:
   - npm install -g nyc
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -17,6 +18,7 @@ before_script:
 
 script:
   - nyc --reporter=lcov npm test
+  - nyc --reporter=lcov ng e2e --protractor-config=e2e/protractor-ci.conf.js
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
