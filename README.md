@@ -17,7 +17,5 @@ This project provides the necessary APIs for accessing houses in a street, stree
 This project is hosted with [Vercel](https://vercel.com) at https://holmes.now.sh
 
 Relevant to this project:
-* The backend service used was [NodeJS](https://nodejs.org/)/[Express](https://expressjs.com/)
-* The database used was [PostgreSQL](https://www.postgresql.org/)
-* The testing framework used was [Jasmine](https://jasmine.github.io/)
+* The backend service used was [NodeJS](https://nodejs.org/)
 
