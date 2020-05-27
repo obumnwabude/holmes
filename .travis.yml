@@ -17,7 +17,8 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - nyc --reporter=lcov npm test
+  - nyc --reporter=lcov npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - nyc --reporter=lcov npm run api:test
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
