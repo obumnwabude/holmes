@@ -6,8 +6,8 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('holmes-root .content span')).getText() as Promise<
-      string
-    >;
+    return element(
+      by.css('holmes-root div mat-toolbar h1.holmes-app-name')
+    ).getText() as Promise<string>;
   }
 }
