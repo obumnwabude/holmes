@@ -7,6 +7,7 @@ import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnDestroy {
+  title: string = 'Holmes';
   mobileQuery: MediaQueryList;
 
   fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
