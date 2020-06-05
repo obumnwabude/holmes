@@ -48,6 +48,24 @@ h1.holmes-app-name {
 
 #holmes-display p {
   margin: 0;
+  padding: 0 5vw;
   font-size: 24px;
+  line-height: 1.05;
+}
+
+footer {
+  height: 12vh;
+  background-color: #1976D2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  padding: 0;
+  margin: auto;
+  font-size: 24px;
+  text-align: center;
   line-height: 1.05;
 }
