@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,8 +14,9 @@ import { DistrictsComponent } from './districts/districts.component';
 @NgModule({
   declarations: [AppComponent, HomeComponent, DistrictsComponent],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    RouterModule.forChild([]),
+    BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
