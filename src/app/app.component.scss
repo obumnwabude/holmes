@@ -4,8 +4,12 @@ mat-toolbar a {
   font-size: 24px;
 }
 
-mat-toolbar a[title-link] {
+mat-toolbar a:not(:first-of-type) {
   margin-bottom: -6px;
+}
+
+mat-toolbar a[districts-link] {
+  margin-left: 24px;
 }
 
 main {
