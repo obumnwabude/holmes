@@ -1,11 +1,12 @@
 #feature-container {
-  margin: 2vh 2vw;
+  margin: 4vh 2vw;
 }
 
 .feature {
   background-color: #0D47A1;
   color: white;
   padding: 16px;
+  margin: 0;
 
   h2 {
     font-weight: bold;
@@ -14,5 +15,27 @@
   h2, p {
     font-size: 18px;
     margin: 0px 0px 16px 0px;
+  }
+}
+
+.feature:first-of-type {
+  margin-bottom: 4vh;
+}
+
+@media screen and (min-width: 576px) {
+  #feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feature {
+    max-width: 600px;
+  }
+
+  .feature:first-of-type {
+    margin-bottom: 0;
+    margin-right: 2vw;
+    text-align: right;
   }
 }

@@ -4,16 +4,29 @@ mat-toolbar a {
   font-size: 24px;
 }
 
-mat-toolbar a:not(:first-of-type) {
+mat-toolbar-row:first-of-type {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2),
+  0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+mat-toolbar-row:first-of-type a:not(:first-of-type) {
   margin-bottom: -6px;
 }
 
-mat-toolbar a[districts-link] {
+a.feature-link {
   margin-left: 24px;
 }
 
+.hide-in-mobile {
+  display: none;
+}
+
+mat-toolbar-row.show-in-mobile {
+  justify-content: space-evenly;
+}
+
 main {
-  padding: 16px;
+  padding: 32px 16px;
 }
 
 #holmes-display-container {
@@ -51,4 +64,14 @@ footer p {
   font-size: 24px;
   text-align: center;
   line-height: 1.05;
+}
+
+@media screen and (min-width: 576px) {
+  a.hide-in-mobile {
+    display: inline-block;
+  }
+
+  .show-in-mobile {
+    display: none;
+  }
 }

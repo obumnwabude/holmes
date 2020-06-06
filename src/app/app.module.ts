@@ -10,9 +10,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { DistrictsComponent } from './districts/districts.component';
+import { StreetsComponent } from './streets/streets.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, DistrictsComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    DistrictsComponent,
+    StreetsComponent,
+  ],
   imports: [
     AppRoutingModule,
     RouterModule.forChild([]),
