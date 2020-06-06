@@ -1,3 +1,13 @@
+#holmes-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#holmes-app-container {
+  flex: 1 0 auto;
+}
+
 mat-toolbar a {
   color: white;
   text-decoration: none;
@@ -56,6 +66,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 footer p {

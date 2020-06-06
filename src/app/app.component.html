@@ -1,29 +1,33 @@
-<mat-toolbar color="primary" role="navigation">
-  <mat-toolbar-row>
-    <a routerLink="." mat-icon-button aria-hidden="true" tabindex="-1">
-      <mat-icon tabindex="-1">home</mat-icon>
-    </a>
-    <a routerLink="." mat-button>{{title}}</a>
-    <a routerLink="/districts" mat-button class="hide-in-mobile feature-link">Districts</a>
-    <a routerLink="/streets" mat-button class="hide-in-mobile feature-link">Streets</a>
-  </mat-toolbar-row>
-  <mat-toolbar-row class="show-in-mobile">
-    <a routerLink="/districts" mat-button>Districts</a>
-    <a routerLink="/streets" mat-button>Streets</a>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div id="holmes-container">
+  <div id="holmes-app-container">
+    <mat-toolbar color="primary" role="navigation">
+      <mat-toolbar-row>
+        <a routerLink="." mat-icon-button aria-hidden="true" tabindex="-1">
+          <mat-icon tabindex="-1">home</mat-icon>
+        </a>
+        <a routerLink="." mat-button>{{title}}</a>
+        <a routerLink="/districts" mat-button class="hide-in-mobile feature-link">Districts</a>
+        <a routerLink="/streets" mat-button class="hide-in-mobile feature-link">Streets</a>
+      </mat-toolbar-row>
+      <mat-toolbar-row class="show-in-mobile">
+        <a routerLink="/districts" mat-button>Districts</a>
+        <a routerLink="/streets" mat-button>Streets</a>
+      </mat-toolbar-row>
+    </mat-toolbar>
 
-<main>
-  <div id="holmes-display-container">
-    <div id="holmes-display">
-      <h1>{{title}}</h1>
-      <p>Welcome to {{title}}!!! Your Real Estate</p>
-      <p *ngIf="isHomePage">At {{title}}, we have various districts and streets you can live in. View them...</p>
-    </div>
+    <main>
+      <div id="holmes-display-container">
+        <div id="holmes-display">
+          <h1>{{title}}</h1>
+          <p>Welcome to {{title}}!!! Your Real Estate</p>
+          <p *ngIf="isHomePage">At {{title}}, we have various districts and streets you can live in. View them...</p>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </main>
   </div>
-  <router-outlet></router-outlet>
-</main>
 
-<footer>
-  <p>All Rights Reserved &copy;2020<br>{{title}}</p>
-</footer>
+  <footer>
+    <p>All Rights Reserved &copy;2020<br>{{title}}</p>
+  </footer>
+</div>

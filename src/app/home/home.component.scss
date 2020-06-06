@@ -30,12 +30,22 @@
   }
 
   .feature {
-    max-width: 600px;
+    padding: 24px;
+
+    h2, p {
+      margin: 0px 0px 24px 0px;
+    }
   }
 
   .feature:first-of-type {
     margin-bottom: 0;
     margin-right: 2vw;
     text-align: right;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    min-width: 25vw;
   }
 }

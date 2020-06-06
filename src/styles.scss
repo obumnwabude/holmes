@@ -28,18 +28,24 @@ $holmes-theme: mat-light-theme($holmes-primary, $holmes-accent, $holmes-warn);
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
 
-body::-webkit-scrollbar, mat-sidenav::-webkit-scrollbar, mat-sidenav-content::-webkit-scrollbar {
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body::-webkit-scrollbar {
   height: 12px;
   width: 12px;
 }
 
-body::-webkit-scrollbar-track, mat-sidenav::-webkit-scrollbar-track, mat-sidenav-content::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
 
-body::-webkit-scrollbar-thumb, mat-sidenav::-webkit-scrollbar-thumb, mat-sidenav-content::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: #4480FF;
 }
