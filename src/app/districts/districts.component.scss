@@ -7,7 +7,28 @@ section {
     font-size: 48px;
   }
 
+  #district-container {
+    margin: 0;
+    padding: 0;
+  }
+
   mat-expansion-panel {
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #district-container {
+    display: grid;
+    grid-gap: 48px;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #district-container {
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: auto auto auto auto;
   }
 }
