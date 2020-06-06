@@ -1,15 +1,18 @@
-#home-container {
-  text-align: center;
-  margin: 2%;
+#feature-container {
+  margin: 2vh 2vw;
 }
 
-#holmes-display h2 {
-  font-size: 72px;
-  padding: 50px;
-}
+.feature {
+  background-color: #0D47A1;
+  color: white;
+  padding: 16px;
 
-#holmes-display p {
-  font-size: 40px;
-  line-height: 1.5;
-  padding: 20px;
+  h2 {
+    font-weight: bold;
+  }
+
+  h2, p {
+    font-size: 18px;
+    margin: 0px 0px 16px 0px;
+  }
 }
