@@ -6,10 +6,8 @@
         <mat-panel-title>{{district.name}}</mat-panel-title>
       </mat-expansion-panel-header>
       <p>Streets in {{district.name}}</p>
-      <mat-list *ngIf="findStreets(district.id) | async as streets">
-        <ng-container *ngFor="let street of streets">
-          <mat-list-item>{{street.name}}</mat-list-item>
-        </ng-container>
+      <mat-list *ngFor="let street of findStreets(district.id)">
+        <mat-list-item>{{street.name}}</mat-list-item>
       </mat-list>
     </mat-expansion-panel>
   </div>
