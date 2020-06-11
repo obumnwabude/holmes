@@ -5,8 +5,14 @@
       <mat-card-title>{{street.name}}</mat-card-title>
       <mat-card-content>
         <mat-list>
-          <mat-list-item>District: {{(findDistrict(street.district_id)).name}}</mat-list-item>
-          <mat-list-item>Houses: {{street.houses}}</mat-list-item>
+          <mat-list-item>
+            <span class="street-property-label">District:</span>
+            <span> {{(findDistrict(street.district_id)).name}}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span class="street-property-label">Houses:</span>
+            <span> {{street.houses}}</span>
+          </mat-list-item>
         </mat-list>
       </mat-card-content>
     </mat-card>
