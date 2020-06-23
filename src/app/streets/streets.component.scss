@@ -1,0 +1,38 @@
+section {
+  margin: 4vh 2vw;
+  padding: 16px;
+
+  h2 {
+    color: #0D47A1;
+    font-size: 48px;
+  }
+
+  #street-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  mat-card {
+    margin-bottom: 16px;
+  }
+
+  mat-list-item span.street-property-label {
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #street-container {
+    display: grid;
+    grid-gap: 48px;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #street-container {
+    display: grid;
+    grid-gap: 64px;
+    grid-template-columns: auto auto auto auto;
+  }
+}

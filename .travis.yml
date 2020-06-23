@@ -9,6 +9,7 @@ cache:
 dist: trusty
 addons:
   chrome: stable
+
 before_script:
   - npm install -g nyc
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -16,7 +17,8 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - nyc --reporter=lcov npm test
+  - nyc --reporter=lcov npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+  - nyc --reporter=lcov npm run api:test
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

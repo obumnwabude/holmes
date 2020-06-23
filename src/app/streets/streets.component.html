@@ -1,0 +1,21 @@
+<section>
+  <h2>Streets</h2>
+  <div id="street-container" *ngIf="streets$ | async as streets">
+    <mat-card *ngFor="let street of streets">
+      <mat-card-title>{{street.name}}</mat-card-title>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>
+            <span class="street-property-label">District:</span>
+            <span> {{(findDistrict(street.district_id)).name}}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span class="street-property-label">Houses:</span>
+            <span> {{street.houses}}</span>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
